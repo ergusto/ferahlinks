@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul id="link_list" class="large_list">
+
+</ul>
+
+{% endblock content %}
+
+{% block scripts %}
+
+<script src="{{ STATIC_URL }}js/app/mvc/event.js"></script>
+<script src="{{ STATIC_URL }}js/app/mvc/model.js"></script>
+<script src="{{ STATIC_URL }}js/app/mvc/collection.js"></script>
+
+<script src="{{ STATIC_URL }}js/app/mvc/views/list.js"></script>
+<script src="{{ STATIC_URL }}js/app/mvc/controllers/list.js"></script>
+<script src="{{ STATIC_URL }}js/app/mvc/views/item.js"></script>
+<script src="{{ STATIC_URL }}js/app/mvc/controllers/item.js"></script>
+<script src="{{ STATIC_URL }}js/app/mvc/views/modal.js"></script>
+<script src="{{ STATIC_URL }}js/app/mvc/controllers/modal.js"></script>
+
+<script src="{{ STATIC_URL }}js/app/mvc/app.js"></script>
+
+{% endblock scripts %}

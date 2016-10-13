@@ -1,0 +1,49 @@
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>ferahlinks</title>
+<link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico">
+
+{% include 'includes/stylesheets.html' %}{% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+
+<body>
+
+	<header id="banner" role="banner">
+		{% if user.is_authenticated %}
+			<a class="js-link-create header-a pull-right"><i class="fa fa-plus"></i></a>
+		{% endif %}
+
+		<a class="logo" href="{% url 'home' %}"><h1>ferahlinks</h1></a>
+
+	</header>
+
+    <main class="container">
+
+		{% block sidebar %}{% endblock sidebar %}
+
+    	<div class="row">
+
+    		{% block content %}{% endblock content %}
+
+    	</div>
+
+    </main>
+	
+	{% block script_templates %}{% endblock script_templates %}
+
+	{% if user.is_authenticated %}
+
+	{% include 'includes/scripts.html' %}
+
+	{% endif %}
+	{% block scripts %}{% endblock scripts %}
+       
+</body>
+
+</html>
+{% endspaceless %}

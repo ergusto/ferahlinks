@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul id="link_list" class="large_list">
+
+</ul>
+
+{% endblock content %}
+
+{% block scripts %}
+
+
+
+<script src="{{ STATIC_URL }}js/app/test/ferah.model.js"></script>
+<script src="{{ STATIC_URL }}js/app/test/ferah.event.js"></script>
+
+<script src="{{ STATIC_URL }}js/app/test/ferah.index.js"></script>
+<script src="{{ STATIC_URL }}js/app/test/ferah.create.js"></script>
+
+<script src="{{ STATIC_URL }}js/app/test/ferah.controller.js"></script>
+
+<script type="text/javascript">
+
+	var model = new ff.Model();
+	var list_view = new ff.views.LinkListView(model);
+	var list_controller = new ff.controllers.LinkListController(model, list_view);
+	var modal_view = new ff.views.LinkModalView(model);
+	var modal_controller = new ff.controllers.LinkModalController(model, modal_view);
+
+	list_view.init();
+
+
+</script>
+
+{% endblock scripts %}

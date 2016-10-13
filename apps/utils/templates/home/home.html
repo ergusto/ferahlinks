@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul id="link_list" class="large_list">
+
+</ul>
+
+{% endblock content %}
+
+{% block scripts %}
+
+<script type="text/javascript">
+
+	window.ff = window.ff || {};
+
+	ff.components.link_list.init();
+
+</script>
+
+{% endblock scripts %}

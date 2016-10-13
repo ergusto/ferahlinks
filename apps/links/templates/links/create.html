@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
+
+	<div class="box">
+
+		<header class="box__header">
+
+			<h3>Create Link</h3>
+
+		</header>
+
+		<form class="clearfix page_form" action="{% url 'link_create' %}" method="post">
+
+			{% csrf_token %}
+
+			{% with form as page_form %}
+				{% include 'includes/forms/page_form.html' %}
+			{% endwith %}
+
+		</form>
+
+	</div>
+
+</div>
+
+{% endblock content %}
